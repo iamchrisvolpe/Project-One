@@ -7,3 +7,31 @@ body {
     text-align: center;
   }
 
+  #gameContainer {
+    width: 40vw;
+    height: 40vw;
+    margin: 2vw auto;
+    background-color: #0c1021;
+  }
+
+  .gameBoardPixel {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 10px;
+    float: left;
+  }
+
+  .snakeBodyPixel {
+    background-color: linear-gradient(180deg, #181818 12.5%,
+    #784F17 12.5%, 25%, #FE0000 25%, 37.5%,
+    #FD8C00 37.5%, 50%, #FFE500 50%, 62.5%,
+    #119F0B 62.5%, 75%, #0644B3 75%, 87.5%,
+    #C22EDC 87.5%);
+    box-shadow: 0 0 5px white;
+  }
+
+  .food {
+    background-color: #68e768;
+  }
+
+  
