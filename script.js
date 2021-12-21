@@ -84,4 +84,20 @@ const  moveSnake  = () => {
                     break;
                 }
                 let  nextSnakeHeadPixel  = gameBoardPixels[currentSnakeHeadPosition];
+            
+
+            if (nextSnakeHeadPixel.classList.contains("snakeBodyPixel")) {
+                // Stop moving the snake
+                clearInterval(moveSnakeInterval);
+                if (!alert(`You have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`))
+                window.location.reload();
             }
+
+            nextSnakeHeadPixel.classList.add("snakeBodyPixel");
+
+            totalDistanceTravelled++;
+
+            document.getElementById("blocksTravelled").innerHTML  = totalDistanceTravelled;
+
+
+        }
