@@ -106,5 +106,7 @@ const  moveSnake  = () => {
                 createFood();
     }};
 
+    createGameBoardPixels();
+
     
 
