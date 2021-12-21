@@ -1,0 +1,1 @@
+const GAME_PIXEL_COUNT = 40;
