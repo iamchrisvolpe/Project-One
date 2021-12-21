@@ -95,6 +95,10 @@ const  moveSnake  = () => {
 
             nextSnakeHeadPixel.classList.add("snakeBodyPixel");
 
+            setTimeout(() => {
+                nextSnakeHeadPixel.classList.remove("snakeBodyPixel");
+            }, snakeLength);
+
             totalDistanceTravelled++;
 
             document.getElementById("blocksTravelled").innerHTML  = totalDistanceTravelled;
@@ -108,5 +112,17 @@ const  moveSnake  = () => {
 
     createGameBoardPixels();
 
-    
+    createFood();
 
+    var  moveSnakeInterval  =  setInterval(moveSnake, 80);
+    addEventListener("keydown", e  =>  changeDirection(e.keyCode));
+
+    const  leftButton  =  document.getElementById("leftButton");
+    const  rightButton  =  document.getElementById("rightButton");
+    const  upButton  =  document.getElementById("upButton");
+    const  downButton  =  document.getElementById("downButton");
+    
+    leftButton.onclick  = () =>  changeDirection(LEFT_DIR);
+    rightButton.onclick  = () =>  changeDirection(RIGHT_DIR);
+    upButton.onclick  = () =>  changeDirection(UP_DIR);
+    downButton.onclick  = () =>  changeDirection(DOWN_DIR);
