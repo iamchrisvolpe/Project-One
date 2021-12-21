@@ -21,3 +21,10 @@ const  createFood  = () => {
     currentFoodPostion  =  Math.floor(currentFoodPostion  *  1600);
     gameBoardPixels[currentFoodPostion].classList.add("food");
 };
+
+let  snakeCurrentDirection  =  RIGHT_DIR;
+
+const  LEFT_DIR  =  37;
+const  UP_DIR  =  38;
+const  RIGHT_DIR  =  39;
+const  DOWN_DIR  =  40;
