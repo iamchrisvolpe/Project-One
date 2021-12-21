@@ -42,3 +42,46 @@ const  changeDirection  =  newDirectionCode  => {
         snakeCurrentDirection  =  newDirectionCode;
     }
 };
+
+let  currentSnakeHeadPosition  =  500;
+let  snakeLength  =  600;
+
+const  moveSnake  = () => {
+    switch (snakeCurrentDirection) {
+        case  LEFT_DIR:
+            --currentSnakeHeadPosition;
+            const  isSnakeHeadAtLastGameBoardPixelTowardsLeft  = currentSnakeHeadPosition  %  40  ==  39  ||  currentSnakeHeadPosition  <  0;
+            if (isSnakeHeadAtLastGameBoardPixelTowardsLeft) {
+                currentSnakeHeadPosition  =  currentSnakeHeadPosition  +  40;
+            }
+            break;
+
+        case  UP_DIR:
+            currentSnakeHeadPosition  =  currentSnakeHeadPosition  -  40;
+            const  isSnakeHeadAtLastGameBoardPixelTowardsUp  = currentSnakeHeadPosition  <  0;
+            if (isSnakeHeadAtLastGameBoardPixelTowardsUp) {
+                currentSnakeHeadPosition  =  currentSnakeHeadPosition  +  1600;
+            }
+            break;
+        
+            case  RIGHT_DIR:
+                ++currentSnakeHeadPosition;
+                const  isSnakeHeadAtLastGameBoardPixelTowardsRight  = currentSnakeHeadPosition  %  40  ==  0;
+                if (isSnakeHeadAtLastGameBoardPixelTowardsRight) {
+                    currentSnakeHeadPosition  =  currentSnakeHeadPosition  -  40;
+                }
+                break;
+            
+            case  DOWN_DIR:
+                    currentSnakeHeadPosition  =  currentSnakeHeadPosition  +  40;
+                    const  isSnakeHeadAtLastGameBoardPixelTowardsDown  = currentSnakeHeadPosition  >  1599;
+                    if (isSnakeHeadAtLastGameBoardPixelTowardsDown) {
+                        currentSnakeHeadPosition  =  currentSnakeHeadPosition  -  1600;
+                    }
+                break;
+                
+            default:
+                    break;
+                }
+                let  nextSnakeHeadPixel  = gameBoardPixels[currentSnakeHeadPosition];
+            }
