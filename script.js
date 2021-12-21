@@ -99,5 +99,12 @@ const  moveSnake  = () => {
 
             document.getElementById("blocksTravelled").innerHTML  = totalDistanceTravelled;
 
+            if (currentSnakeHeadPosition  ==  currentFoodPostion) {
+                totalFoodAte++;
+                document.getElementById("pointsEarned").innerHTML  =  totalFoodAte;
+                snakeLength  =  snakeLength  +  100
+                createFood();
+    }};
 
-        }
+    
+
