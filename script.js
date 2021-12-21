@@ -13,3 +13,7 @@ const  createGameBoardPixels  = () => {
 
 const  gameBoardPixels  =  document.getElementsByClassName("gameBoardPixel");
 
+let  currentFoodPostion  =  0;
+const  createFood  = () => {
+    gameBoardPixels[currentFoodPostion].classList.remove("food");
+}
