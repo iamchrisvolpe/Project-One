@@ -22,7 +22,7 @@ body {
   }
 
   .snakeBodyPixel {
-    background-color: linear-gradient(180deg, #181818 12.5%,
+    background-color: linear-gradient(#181818 12.5%,
     #784F17 12.5%, 25%, #FE0000 25%, 37.5%,
     #FD8C00 37.5%, 50%, #FFE500 50%, 62.5%,
     #119F0B 62.5%, 75%, #0644B3 75%, 87.5%,
@@ -31,7 +31,7 @@ body {
   }
 
   .food {
-    background-color: #68e768;
+    background-color: red;
   }
 
   #scoreContainer {
@@ -42,9 +42,7 @@ body {
   }
 
   .scoreBoard {
-    border-radius: 10px;
-    border: solid 5px slategrey;
-    color: dimgray;
+    color: white;
     background-color: #0c1021;
     display: inline-block;
     padding: 1vw;
